@@ -43,8 +43,10 @@ Calculadora:
 Elija su operacion: """))
         if numero == 1:
             print(sumar())
-        if numero == 2:
+        elif numero == 2:
             print(resta())
+        elif numero == 3:
+            pass
             
 
 
