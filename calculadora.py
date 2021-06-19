@@ -1,7 +1,7 @@
 def resta():
     resta= input("""
 Con x se termina de sumar.
-Ingrese el numero de la suma: """)
+Ingrese el primer numero de la resta: """)
     if resta == "x":
         print("Suma terminada")
     resta = int(resta)
@@ -9,13 +9,14 @@ Ingrese el numero de la suma: """)
     while True:
         num = input("""
 Con x se termina de sumar.
-Ingrese el numero de la suma: """)
+Ingrese el numero para restar: """)
         if num == "x":
-            print("Suma terminada")
+            print("Resta finalizada")
             break
         num = int(num)
         resta -= num
         print(resta)
+
 
 def sumar(suma):
     suma =[]
@@ -24,11 +25,16 @@ def sumar(suma):
 Con x se termina de sumar.
 Ingrese el numero de la suma: """)
                 if num == "x":
-                    print("Suma terminada")
+                    print("Suma finalizada")
                     break
                 num = int(num)
                 suma.append(num)
                 print(sum(suma))
+
+
+def multiplicar():
+    pass
+
 
 def run():
     numero = 0 
@@ -46,7 +52,7 @@ Elija su operacion: """))
         elif numero == 2:
             print(resta())
         elif numero == 3:
-            pass
+            print(multiplicar())
             
 
 
