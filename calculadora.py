@@ -8,7 +8,7 @@ Ingrese el primer numero de la resta: """)
     print(resta)
     while True:
         num = input("""
-Con x se termina de sumar.
+Con x se termina la resta.
 Ingrese el numero para restar: """)
         if num == "x":
             print("Resta finalizada")
@@ -32,9 +32,9 @@ Ingrese el numero de la suma: """)
 
 
 def multiplicar():
-    multi= input("""
-Con x se termina de multiplicar.
-Ingrese el primer numero de la resta: """)
+    multi = input("""
+Con x se termina la multiplicacion.
+Ingrese el primer numero de la multiplicacion: """)
     if multi == "x":
             return "Nada calculado"
     multi = float(multi)
@@ -51,7 +51,23 @@ Ingrese para multiplicar: """)
 
 
 def division(): 
-    pass
+    div = input("""
+Con x se termina de dividir.
+Ingrese el primer numero de la division: """)
+    if div == "x":
+        return "Nada calculado"
+    div = float(div)
+    print(div)
+    while True:
+        num = input("""
+Con x se termina la division.
+Ingrese el numero para dividir: """)
+        if num == "x":
+            print("Division finalizada")
+            break
+        num = float(num)
+        div /= num
+        print(div)
 
 
 def run():
@@ -63,7 +79,7 @@ Calculadora:
 2.Resta
 3.Multiplicacion
 4.Dividir
-5.Terminar calculadora
+Elija otra numero para finalizar la operacion
 Elija su operacion: """))
         if numero == 1:
             print(sumar())
@@ -71,9 +87,11 @@ Elija su operacion: """))
             print(resta())
         elif numero == 3:
             print(multiplicar())
-        if numero == 4:
-            pass
-            
+        elif numero == 4:
+            print(division())
+        else:
+            print("Calculadora finalizada")
+            return False
 
 
 if __name__ == "__main__":
