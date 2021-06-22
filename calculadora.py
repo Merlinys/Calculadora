@@ -65,14 +65,24 @@ Calculadora:
 4.Dividir
 5.Terminar calculadora
 Elija su operacion: """))
-        if numero == 1:
+        if numero < 1 and numero > 5 :
+            print(F"Error, {numero} no esta permitido")
+            numero = int(input("""
+Calculadora:
+1.Sumar
+2.Resta
+3.Multiplicacion
+4.Dividir
+5.Terminar calculadora
+Elija su operacion: """))
+        elif numero == 1:
             print(sumar())
         elif numero == 2:
             print(resta())
         elif numero == 3:
             print(multiplicar())
         if numero == 4:
-            pass
+            print(division())
             
 
 
